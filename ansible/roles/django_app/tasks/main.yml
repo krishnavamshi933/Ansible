@@ -1,0 +1,12 @@
+---
+- name: Clone Django project (use git module)
+  # Replace with the actual Git repository URL and destination directory
+  git:
+    repo: https://github.com/your_username/your_django_project.git
+    dest: /path/to/your/destination/directory
+    version: master
+  become: yes
+
+- name: Install Django project dependencies
+  pip:
+    requirements: /path/to/your/project/requirements.txt
